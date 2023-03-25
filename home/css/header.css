@@ -30,6 +30,7 @@ header{
     display: flex;
     align-items: center;
     gap: 0.7rem;
+    cursor: pointer;
 }
 
 .button__sair i{
