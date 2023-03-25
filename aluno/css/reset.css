@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+ul, li, a, ol {
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+
+:root{
+    --primary-color: #3347B0;
+}

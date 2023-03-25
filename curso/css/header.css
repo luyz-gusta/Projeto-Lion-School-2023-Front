@@ -1,0 +1,71 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 150px;
+    height: 13vh;
+    background-color: var(--primary-color);
+}
+
+.logo__escola{
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.img__logo{
+    width: auto;
+    height: 75px;
+}
+
+.nome__escola{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    max-width: 6.25rem;
+    height: 70px;
+}
+
+.button__sair{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    cursor: pointer;
+}
+
+.button__sair i{
+    font-size: 2.8rem;
+    color: #fff;
+}
+
+.text__sair{
+    font-size: 3rem;
+    height: 4rem;
+    color: #fff;
+}
+
+@media (max-width: 640px) {
+    header{
+        padding: 50px;
+    }
+}
+
+@media (max-width: 475px) {
+    .img__logo{
+        height: 60px;
+        width: auto;
+    }
+    .nome__escola{
+        font-size: 1.2rem;
+        height: 50px;
+    }
+    .button__sair i{
+        font-size: 2rem;
+        color: #fff;
+    }
+    
+    .text__sair{
+        font-size: 2rem;
+        height: 35px;
+    }    
+}
