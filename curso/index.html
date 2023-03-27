@@ -8,13 +8,12 @@
     <!--Links Gerais-->
     <link rel="shortcut icon" href="./img/logo-image.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <!--Links CSS-->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/dropdown-menu.css">
     <!--Scripts-->
     <script src="https://kit.fontawesome.com/cb4f3aa626.js" crossorigin="anonymous"></script>
     <script src="./js/main.js" defer type="module"></script>
@@ -34,13 +33,67 @@
     </header>
     <main>
         <nav class="filtragem__alunos">
-            <select id="selecao__filtros">
-                <option value="Status" id="opcaoStatus">Status</option>
-                <option value="Finalizado" id="opcaoStatus">Finalizado</option>
-                <option value="Cursando" id="opcaoStatus">Cursando</option>
-            </select>
+            <!-- <select id="selecao__filtros">
+                <option value="Status" class="opcaoStatus" id="Status">Status</option>
+                <option value="Finalizado" class="opcaoStatus" id="Finalizado">Finalizado</option>
+                <option value="Cursando" class="opcaoStatus" id="cursando">Cursando</option>
+            </select> -->
+            <!-- <ul class="dropdown-menu">
+                <li><a href="#">HOME</a></li>
+                <li>
+                    <ul class="dropdown-submenu">
+                        <li><a href="#">Status</a></li>
+                        <li><a href="#">Finzalizado</a></li>
+                        <li><a href="#">Cursadn</a></li>
+                    </ul>
+                </li>
+            </ul> -->
+            <ul class="status__aluno">Status</ul>
+            <div class="legenda">
+                <p class="text__legenda">LEGENDA</p>
+                <div class="legenda__cursando">
+                    <div class="box__cursando"></div>
+                    <p class="text__cursando">Cursando</p>
+                </div>
+                <div class="legenda__finalizado">
+                    <div class="box__finalizado"></div>
+                    <p class="text__finalizado">Finalizado</p>
+                </div>
+            </div>
         </nav>
-
+        <div class="container__cursos">
+            <h1 class="nome__curso">Desenvolvimento de sistemas</h1>
+        </div>
+        <div class="container__cards">
+            <div class="card__aluno">
+                <img src="./img/icon__woman.png" alt="" class="img__aluno">
+                <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+            </div>
+            <div class="card__aluno">
+                <img src="./img/icon__woman.png" alt="" class="img__aluno">
+                <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+            </div>
+            <div class="card__aluno">
+                <img src="./img/icon__woman.png" alt="" class="img__aluno">
+                <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+            </div>
+            <div class="card__aluno">
+                <img src="./img/icon__woman.png" alt="" class="img__aluno">
+                <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+            </div>
+            <div class="card__aluno">
+                <img src="./img/icon__woman.png" alt="" class="img__aluno">
+                <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+            </div>
+            <div class="card__aluno">
+                <img src="./img/icon__woman.png" alt="" class="img__aluno">
+                <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+            </div>
+            <div class="card__aluno">
+                <img src="./img/icon__woman.png" alt="" class="img__aluno">
+                <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="contato">
@@ -54,7 +107,7 @@
             </div>
             <div class="contato__endereco">
                 <i class="fa-solid fa-location-dot"></i>
-                <p class="endereco__text">Rua tcc, 211,  Centro, Jandira</p>
+                <p class="endereco__text">Rua tcc, 211, Centro, Jandira</p>
             </div>
         </div>
         <div class="text__footer">Copyright © 2022 | Luiz Gustavo | Vinicius Monteiro</div>
@@ -73,8 +126,6 @@
             </li>
         </ul>
     </footer>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 </body>
 
 </html>

@@ -9,7 +9,7 @@ export const getCursos = (cursos, indice) => {
     cardCurso.classList.add('card__curso')
 
     const imgCurso = document.createElement('img')
-    imgCurso.src = `./${dadosCursos[indice].icone}`
+    imgCurso.src = `${dadosCursos[indice].icone}`
     imgCurso.classList.add('img__curso')
     
     const nomeCurso = document.createElement('div')

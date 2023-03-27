@@ -1,24 +1,74 @@
-main{
+main {
     height: 70vh;
     overflow-y: auto;
+    gap: 20px;
+
 }
 
-.filtragem__alunos{
-    height: 100px;
-    background-color:#BCC2E5;
-}
-
-#selecao__filtros{
-    width: 100px;
+.filtragem__alunos {
+    display: flex;
+    justify-content: space-between;
     background-color: #BCC2E5;
-    ;
-    border-color: transparent;
+    height: 50px;
+    width: 100%;
 }
 
-#opcaoStatus{
-    background-color: red;
+.legenda {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    font-style: normal;
 }
 
-#opcaoStatus:hover{
-    background-color: green;
+.box__cursando {
+    width: 20px;
+    height: 20px;
+    background: #3347B0;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.container__cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 120px;
+    gap: 70px;
+}
+
+.nome__curso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.card__aluno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 300px;
+    background-color: #3347B0;
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.25);
+    gap: 25px;
+    cursor: pointer;
+}
+
+.nome__aluno {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+    width: 100%;
 }

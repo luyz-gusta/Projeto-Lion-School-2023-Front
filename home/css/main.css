@@ -41,9 +41,12 @@ main{
     background: var(--primary-color);
     box-shadow: 12px 12px 4px rgba(51, 71, 176, 0.5);
     cursor: pointer;
+    transition: all 0.7s;
 }
 
 .card__curso:hover{
+    width: 32rem;
+    height: 17vh;
     border: 2px solid #000000;
 }
 
@@ -57,6 +60,7 @@ main{
     width: 5vw;
     height: auto;
     color: #fff;
+    filter: invert(100%);
 }
 
 @media (max-width: 640px) {
