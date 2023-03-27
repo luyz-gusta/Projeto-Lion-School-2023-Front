@@ -19,8 +19,7 @@ export const getCursos = (cursos, indice) => {
     cardCurso.append(imgCurso, nomeCurso)
 
     const clickCuros = cardCurso.addEventListener('click',  (event) => {
-        window.open('http://127.0.0.1:5500/curso/index.html')
-        window.close('http://127.0.0.1:5500/home/index.html')
+        window.location.href = ('http://127.0.0.1:5500/curso/index.html')
     })
 
     return cardCurso

@@ -5,11 +5,14 @@
     font-family: 'Roboto';
 }
 
-ul, li, a, ol {
+ul, li, ol, a {
     text-decoration: none;
     list-style: none;
     color: inherit;
 }
+
+
+
 
 
 :root{

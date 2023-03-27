@@ -1,3 +1,24 @@
 main{
     height: 70vh;
+    overflow-y: auto;
+}
+
+.filtragem__alunos{
+    height: 100px;
+    background-color:#BCC2E5;
+}
+
+#selecao__filtros{
+    width: 100px;
+    background-color: #BCC2E5;
+    ;
+    border-color: transparent;
+}
+
+#opcaoStatus{
+    background-color: red;
+}
+
+#opcaoStatus:hover{
+    background-color: green;
 }
