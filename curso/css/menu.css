@@ -1,0 +1,36 @@
+.menu ul {
+    display: none;
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+.menu li a {
+    color: var(--primary-color);
+}
+
+.menu ul li {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
+
+.certo {
+    color: #fff;
+    visibility: hidden;
+}
+
+.menu ul li a {
+    display: flex;
+    gap: 10px;
+    transition: ease-in-out .5s;
+    color: #fff;
+}
+
+.menu ul li a:hover .certo{
+    visibility: visible;
+}
+
+.btnFormat {
+    background-color: transparent;
+    border: none;
+}

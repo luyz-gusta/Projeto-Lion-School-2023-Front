@@ -10,6 +10,7 @@ footer{
 .contato{
     display: flex;
     flex-direction: column;
+    gap: 12px;
 }
 
 .contato__telefone{

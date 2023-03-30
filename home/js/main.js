@@ -4,22 +4,23 @@ import {cursos} from "../../json/cursos.js"
 
 const dadosCursos = cursos
 
-export const getCursos = (cursos, indice) => {
+const getCursos = (curso, indice) => {
     const cardCurso = document.createElement('div')
     cardCurso.classList.add('card__curso')
 
     const imgCurso = document.createElement('img')
-    imgCurso.src = `${dadosCursos[indice].icone}`
+    imgCurso.src = `${curso.icone}`
     imgCurso.classList.add('img__curso')
     
     const nomeCurso = document.createElement('div')
     nomeCurso.classList.add('nome__curso')
-    nomeCurso.textContent = dadosCursos[indice].sigla
+    nomeCurso.textContent = curso.sigla
 
     cardCurso.append(imgCurso, nomeCurso)
 
-    const clickCuros = cardCurso.addEventListener('click',  (event) => {
-        window.location.href = ('http://127.0.0.1:5500/curso/index.html')
+    cardCurso.addEventListener('click', () => {
+        localStorage.setItem('curso', nomeCurso.textContent)
+        window.location.href = 'http://127.0.0.1:5500/curso/index.html'
     })
 
     return cardCurso
@@ -35,7 +36,6 @@ const exit = () => {
     const buttonSair = document.querySelector('.button__sair')
     buttonSair.onclick = function () {
         window.close()
-        console.log('teste')
     }
 }
 carregarCursos()

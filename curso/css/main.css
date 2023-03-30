@@ -2,32 +2,52 @@ main {
     height: 70vh;
     overflow-y: auto;
     gap: 20px;
-
+    padding-bottom: 7.2rem;
 }
 
-.filtragem__alunos {
+nav {
     display: flex;
     justify-content: space-between;
     background-color: #BCC2E5;
     height: 50px;
     width: 100%;
+    align-items: center;
+    padding: 0 120px;
 }
 
 .legenda {
     display: flex;
     align-items: center;
-    width: 400px;
+    width: 320px;
     height: 100%;
     font-size: 1rem;
     font-weight: 500;
     color: var(--primary-color);
     font-style: normal;
+    gap: 24px;
+}
+
+.legenda__cursando {
+    display: flex;
+    gap: 8px;
+}
+
+.legenda__finalizado {
+    display: flex;
+    gap: 8px;
 }
 
 .box__cursando {
     width: 20px;
     height: 20px;
     background: #3347B0;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.box__finalizado {
+    width: 20px;
+    height: 20px;
+    background: #E5B657;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -50,7 +70,7 @@ main {
     color: var(--primary-color);
 }
 
-.card__aluno {
+.card__aluno__cursando {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,6 +78,24 @@ main {
     width: 200px;
     height: 300px;
     background-color: #3347B0;
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.25);
+    gap: 25px;
+    cursor: pointer;
+}
+
+.img__aluno{
+    width: 200px;
+    height: 200px;
+}
+
+.card__aluno__finalizado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 300px;
+    background-color: #E5B657;
     box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.25);
     gap: 25px;
     cursor: pointer;

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/dropdown-menu.css">
+    <link rel="stylesheet" href="./css/menu.css">
     <!--Scripts-->
     <script src="https://kit.fontawesome.com/cb4f3aa626.js" crossorigin="anonymous"></script>
     <script src="./js/main.js" defer type="module"></script>
@@ -32,23 +32,56 @@
         </div>
     </header>
     <main>
-        <nav class="filtragem__alunos">
-            <!-- <select id="selecao__filtros">
-                <option value="Status" class="opcaoStatus" id="Status">Status</option>
-                <option value="Finalizado" class="opcaoStatus" id="Finalizado">Finalizado</option>
-                <option value="Cursando" class="opcaoStatus" id="cursando">Cursando</option>
-            </select> -->
-            <!-- <ul class="dropdown-menu">
-                <li><a href="#">HOME</a></li>
+        <!-- <nav class="filtragem__alunos">
+            <ul class="dropdown-menu">
+                <li><a href="#">Status</a></li>
                 <li>
                     <ul class="dropdown-submenu">
-                        <li><a href="#">Status</a></li>
+                        <li><a href="#">Todos</a></li>
                         <li><a href="#">Finzalizado</a></li>
-                        <li><a href="#">Cursadn</a></li>
+                        <li><a href="#">Cursando</a></li>
                     </ul>
                 </li>
-            </ul> -->
-            <ul class="status__aluno">Status</ul>
+            </ul>
+            <div class="legenda">
+                <p class="text__legenda">LEGENDA</p>
+                <div class="legenda__cursando">
+                    <div class="box__cursando"></div>
+                    <p class="text__cursando">Cursando</p>
+                </div>
+                <div class="legenda__finalizado">
+                    <div class="box__finalizado"></div>
+                    <p class="text__finalizado">Finalizado</p>
+                </div>
+            </div>
+        </nav> -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Status</a></li>
+                <ul>
+                    <button class="btnFormat" id="status">
+                        <li>
+                            <a href="#">
+                                Status <i class="fa-solid fa- certo"></i>
+                            </a>
+                        </li>
+                    </button>
+                    <button class="btnFormat" id="finalizado">
+                        <li>
+                            <a href="#">
+                                Finalizado <i class="fa-solid fa-check certo"></i>
+                            </a>
+                        </li>
+                    </button>
+                    <button class="btnFormat" id="cursando">
+                        <li>
+                            <a href="#">
+                                Cursando <i class="fa-solid fa-check certo"></i>
+                            </a>
+                        </li>
+                    </button>
+                </ul>
+            </ul>
             <div class="legenda">
                 <p class="text__legenda">LEGENDA</p>
                 <div class="legenda__cursando">
@@ -61,39 +94,50 @@
                 </div>
             </div>
         </nav>
-        <div class="container__cursos">
-            <h1 class="nome__curso">Desenvolvimento de sistemas</h1>
-        </div>
-        <div class="container__cards">
-            <div class="card__aluno">
-                <img src="./img/icon__woman.png" alt="" class="img__aluno">
-                <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+        <section>
+            <div class="container__cursos">
+                <h1 class="nome__curso">Desenvolvimento de sistemas</h1>
             </div>
-            <div class="card__aluno">
-                <img src="./img/icon__woman.png" alt="" class="img__aluno">
-                <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+            <div class="container__cards">
+                <!-- <div class="card__aluno__ds">
+                    <img src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-4-avatar-2754580_120522.png" alt="" class="img__aluno">
+                    <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+                </div> -->
+                <!-- <div class="card__aluno__finalizado">
+                    <img src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-4-avatar-2754580_120522.png" alt="" class="img__aluno">
+                    <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+                </div>
+                <div class="card__aluno__finalizado">
+                    <img src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-4-avatar-2754580_120522.png" alt="" class="img__aluno">
+                    <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+                </div>
+                <div class="card__aluno__finalizado">
+                    <img src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-4-avatar-2754580_120522.png" alt="" class="img__aluno">
+                    <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+                </div>
+                <div class="card__aluno__finalizado">
+                    <img src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-4-avatar-2754580_120522.png" alt="" class="img__aluno">
+                    <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+                </div>
+                <div class="card__aluno__finalizado">
+                    <img src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-4-avatar-2754580_120522.png" alt="" class="img__aluno">
+                    <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+                </div>
+                <div class="card__aluno__finalizado">
+                    <img src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-4-avatar-2754580_120522.png" alt="" class="img__aluno">
+                    <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+                </div>
+                <div class="card__aluno__finalizado">
+                    <img src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-4-avatar-2754580_120522.png" alt="" class="img__aluno">
+                    <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+                </div>
+                <div class="card__aluno__finalizado">
+                    <img src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-4-avatar-2754580_120522.png" alt="" class="img__aluno">
+                    <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
+                </div> -->
             </div>
-            <div class="card__aluno">
-                <img src="./img/icon__woman.png" alt="" class="img__aluno">
-                <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
-            </div>
-            <div class="card__aluno">
-                <img src="./img/icon__woman.png" alt="" class="img__aluno">
-                <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
-            </div>
-            <div class="card__aluno">
-                <img src="./img/icon__woman.png" alt="" class="img__aluno">
-                <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
-            </div>
-            <div class="card__aluno">
-                <img src="./img/icon__woman.png" alt="" class="img__aluno">
-                <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
-            </div>
-            <div class="card__aluno">
-                <img src="./img/icon__woman.png" alt="" class="img__aluno">
-                <p class="nome__aluno">HÉLIDA BENTO DE OLIVEIRA LINS</p>
-            </div>
-        </div>
+        </section>
+
     </main>
     <footer>
         <div class="contato">
