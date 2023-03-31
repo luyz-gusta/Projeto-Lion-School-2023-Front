@@ -1,36 +1,48 @@
 .menu ul {
     display: none;
-    background-color: var(--primary-color);
-    padding: 10px;
+}
+.card a:hover{
+    color:#BCC2E5 ;
 }
 
 .menu li a {
-    color: var(--primary-color);
+    color: #3347B0;
+}
+
+.menu:hover ul {
+    display: flex;
+    flex-direction: column;
+    transition: .3s ease-in-out
+}
+
+.menu ul {
+    background-color: #3347B0;
+    padding: 10px;
 }
 
 .menu ul li {
+    padding: 5px;
     display: flex;
     gap: 10px;
-    padding: 5px;
 }
 
 .certo {
-    color: #fff;
+    color: #FFFF;
     visibility: hidden;
 }
 
 .menu ul li a {
+    color: #FFFF;
     display: flex;
-    gap: 10px;
+    gap: 5px;
     transition: ease-in-out .5s;
-    color: #fff;
 }
 
-.menu ul li a:hover .certo{
+.menu ul li a:hover .certo {
     visibility: visible;
 }
 
-.btnFormat {
+.btnFormat{
     background-color: transparent;
     border: none;
 }

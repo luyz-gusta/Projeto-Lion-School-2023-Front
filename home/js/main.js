@@ -1,10 +1,12 @@
 'use strict'
 
-import {cursos} from "../../json/cursos.js"
+// import {cursos} from "../../json/cursos.js"
 
-const dadosCursos = cursos
+import { getCursos } from "./api.js"
 
-const getCursos = (curso, indice) => {
+const dadosCursos = await getCursos()
+
+const cursos = (curso, indice) => {
     const cardCurso = document.createElement('div')
     cardCurso.classList.add('card__curso')
 
@@ -28,7 +30,7 @@ const getCursos = (curso, indice) => {
 
 const carregarCursos = () =>{
     const containerCursos = document.querySelector('.container__cursos')
-    const listaCursos = dadosCursos.map(getCursos)
+    const listaCursos = dadosCursos.cursos.map(cursos)
     containerCursos.replaceChildren(...listaCursos)
 }
 
