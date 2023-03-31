@@ -27,7 +27,9 @@ const curso = localStorage.getItem('curso')
 // }
 
 const listaAlunos = await getAlunos(curso)
-// const listaAlunosFiltrado = await getAlunosStatus(statusVariado)
+const listaAlunosCursando = await getAlunosStatus('Cursando')
+const listaAlunosFinalizado = await getAlunosStatus('Finalizado')
+
 
 const exit = () => {
     const buttonSair = document.querySelector('.button__sair')
@@ -76,7 +78,16 @@ const criarCards = (aluno) => {
 
 const carregarCards = () => {
     const containerCards = document.querySelector('.container__cards')
-    const alunos = listaAlunos.informacoes.map(criarCards)
+    const status = document.getElementById('status')
+    const cursando = document.getElementById('cursando')
+    const finalizado = document.getElementById('finalizado')
+    let alunos = listaAlunos.informacoes.map(criarCards)
+    cursando.onclick = () => {
+        alunos = listaAlunosCursando.informacoes.map(criarCards)
+    }
+    finalizado.onclick = () => {
+        alunos = listaAlunosFinalizado.informacoes.map(criarCards)
+    }
     containerCards.replaceChildren(...alunos)
 }
 
