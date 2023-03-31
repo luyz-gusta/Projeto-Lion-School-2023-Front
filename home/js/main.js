@@ -20,7 +20,7 @@ const getCursos = (curso, indice) => {
 
     cardCurso.addEventListener('click', () => {
         localStorage.setItem('curso', nomeCurso.textContent)
-        window.location.href = 'http://127.0.0.1:5500/curso/index.html'
+        window.location.href = './curso.html'
     })
 
     return cardCurso
