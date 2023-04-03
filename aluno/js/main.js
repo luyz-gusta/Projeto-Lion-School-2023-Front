@@ -9,8 +9,7 @@ const matricula = localStorage.getItem('matricula')
 const exit = () => {
     const buttonSair = document.querySelector('.button__sair')
     buttonSair.onclick = function () {
-        window.close()
-        console.log('teste')
+        window.location.href = "./curso.html";
     }
 }
 
@@ -21,7 +20,7 @@ const criarCardsAluno = (aluno) => {
         cardAluno.classList.add('card-aluno')
 
         const fotoAluno = document.createElement('img')
-        fotoAluno.src = alunos[0].foto
+        fotoAluno.src = aluno.foto
         fotoAluno.classList.add('image-aluno')
 
         const nomeAluno = document.createElement('p')
@@ -40,7 +39,6 @@ const criarCardsAluno = (aluno) => {
     } else {
         return ''
     }
-    
 }
 
 const carregarCard = () => {
@@ -106,8 +104,8 @@ const carregarGrafico = () => {
     container.append(...grafico)
 }
 
-
-carregarGrafico()
 carregarCard()
+carregarGrafico()
+
 
 exit()

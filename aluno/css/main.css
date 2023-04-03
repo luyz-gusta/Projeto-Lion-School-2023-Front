@@ -11,7 +11,7 @@ main {
     grid-template-columns: 2fr 2fr;
     align-items: center;
     justify-items: center;
-
+    padding-top: 2rem;
 }
 .container{
     height: 70vh;
@@ -25,29 +25,23 @@ main {
 
 .card-aluno {
     grid-area: aluno;
-    display: grid;
-    grid-template-areas:
-        "imagem"
-        "nome";
-    grid-template-rows:
-        2fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
     height: 50vh;
     width: 25vw;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    justify-content: center;
 }
 
 
 .image-aluno {
-    grid-area: imagem;
     width: 20vw;
     height: 40vh;
-    margin-top: 2vh;
-
 }
 
 .name-aluno {
-    grid-area: nome;
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     justify-self: center;
@@ -58,18 +52,17 @@ main {
 .card-notas {
     grid-area: notas;
     height: 50vh;
-    width: 25vw;
+    width: 40vw;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .box-notas {
     height: 50vh;
-    width: 25vw;
+    width: 40vw;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 2%;
+    gap: 50px;
 }
 
 .nota-aluno {
@@ -80,7 +73,7 @@ main {
         "materia";
     grid-template-rows:
         .2fr 1fr .1fr;
-    padding: 5%;
+    place-items: center;
 }
 
 .porcentagem-nota-aprovado{
@@ -127,7 +120,6 @@ main {
     background: #3347B0;
     box-shadow: 0px 0px 24px #3347B0;
     border-radius: 4px 4px 0px 0px;
-
 }
 
 .nota-reprovado {
@@ -150,4 +142,57 @@ main {
     line-height: 27px;
     color: #3347B0;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);   
+}
+
+@media (max-width: 640px) {
+    .card-container {
+        height: auto;
+        display: grid;
+        grid-template-areas:
+            "container";
+        grid-template-columns: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 3rem;
+    }
+    .box-notas{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    .card-aluno {
+        grid-area: container;
+    }
+    .card-aluno{
+        width: 70vw;
+    }
+    .image-aluno{
+        width: 50vw;
+    }
+    .card-notas{
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+        grid-area: container;
+    }
+    .box-notas{
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .box-notas{
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+    }
+    .card-notas{
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+        grid-area: container;
+        height: 45rem;
+    }
+
 }
