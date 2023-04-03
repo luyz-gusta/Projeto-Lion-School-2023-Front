@@ -22,6 +22,7 @@ const cursos = (curso, indice) => {
 
     cardCurso.addEventListener('click', () => {
         localStorage.setItem('curso', nomeCurso.textContent)
+        localStorage.setItem('nome_curso', curso.nome)
         window.location.href = './curso.html'
     })
 

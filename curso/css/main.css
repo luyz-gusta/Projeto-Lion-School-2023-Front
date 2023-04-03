@@ -15,6 +15,35 @@ nav {
     padding: 0 120px;
 }
 
+.filtro__ano{
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.filtro__ano p {
+    color: #3347B0;
+}
+
+.filtro__ano input{
+    width: 96px;
+    border-color: #3347B0;
+    text-align: end;
+}
+
+.button__year{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 1.3rem;
+    width: 1.5rem;
+    border-radius: 5px;
+    background-color: #3347B0;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
 .legenda {
     display: flex;
     align-items: center;
