@@ -1,10 +1,12 @@
 'use strict'
 
 import {
-    alunos
-} from "../../json/alunos.js"
+    getMatricula
+} from "../js/api.js"
 
 const matricula = localStorage.getItem('matricula')
+
+const alunoMatricula = await getMatricula(matricula)
 
 const exit = () => {
     const buttonSair = document.querySelector('.button__sair')
@@ -13,19 +15,20 @@ const exit = () => {
     }
 }
 
+console.log(alunoMatricula)
 
-const criarCardsAluno = (aluno) => {
-    if (aluno.matricula == matricula) {
+const criarCardsAluno = () => {
+    if (alunoMatricula.matricula == matricula) {
         const cardAluno = document.createElement('div')
         cardAluno.classList.add('card-aluno')
 
         const fotoAluno = document.createElement('img')
-        fotoAluno.src = aluno.foto
+        fotoAluno.src = alunoMatricula.foto
         fotoAluno.classList.add('image-aluno')
 
         const nomeAluno = document.createElement('p')
         nomeAluno.classList.add('name-aluno')
-        nomeAluno.textContent = aluno.nome
+        nomeAluno.textContent = alunoMatricula.nome
 
         const cardNotas = document.createElement('div')
         cardNotas.classList.add('card-notas')
@@ -43,19 +46,20 @@ const criarCardsAluno = (aluno) => {
 
 const carregarCard = () => {
     const container = document.getElementById('card-container')
-    const cards = alunos.map(criarCardsAluno)
-    container.append(...cards)
+    const cards = criarCardsAluno()
+    container.append(cards)
+
 }
 
-const criarGrafico = (aluno) => {
-    if (aluno.matricula == matricula) {
+const criarGrafico = () => {
+    if (alunoMatricula.matricula == matricula) {
         const cardNotas = document.createElement('div')
         cardNotas.classList.add('card-notas')
 
         const boxNotas = document.createElement('div')
         boxNotas.classList.add('box-notas')
 
-        aluno.curso[0].disciplinas.forEach(function(listaDisciplina) {
+        alunoMatricula.disciplinas.forEach(function(listaDisciplina) {
             const notaAluno = document.createElement('div')
             notaAluno.classList.add('nota-aluno')
 
@@ -84,7 +88,7 @@ const criarGrafico = (aluno) => {
 
             const materia = document.createElement('h1')
             materia.classList.add('subject')
-            materia.textContent = listaDisciplina.nome.substr(1,2,3).toUpperCase()
+            materia.textContent = listaDisciplina.sigla
 
             tamanhoNota.append(barraNota)
             notaAluno.append(textNota, tamanhoNota, materia)
@@ -100,8 +104,8 @@ const criarGrafico = (aluno) => {
 
 const carregarGrafico = () => {
     const container = document.getElementById('card-container')
-    const grafico = alunos.map(criarGrafico)
-    container.append(...grafico)
+    const grafico = criarGrafico()
+    container.append(grafico)
 }
 
 carregarCard()

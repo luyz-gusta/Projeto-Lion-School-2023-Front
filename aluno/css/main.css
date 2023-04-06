@@ -13,15 +13,7 @@ main {
     justify-items: center;
     padding-top: 2rem;
 }
-.container{
-    height: 70vh;
-    display: grid;
-    grid-template-areas:
-        "aluno notas";
-    grid-template-columns: 2fr 2fr;
-    align-items: center;
-    justify-items: center;
-}
+
 
 .card-aluno {
     grid-area: aluno;
@@ -38,7 +30,6 @@ main {
 
 .image-aluno {
     width: 20vw;
-    height: 40vh;
 }
 
 .name-aluno {
@@ -143,6 +134,54 @@ main {
     color: #3347B0;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);   
 }
+@media (max-width: 1440px){
+    .box-notas{
+        gap: 5%;
+    }
+
+    .tamanho-nota{
+        width: 1.2vw;
+    }
+}
+@media (max-width: 1024px){
+    .card-aluno{
+        width: 35vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .image-aluno{
+        width: 25vw ;
+    }
+
+    .box-notas{
+        gap: 4%;
+    }
+}
+@media (max-width: 768px){
+    .card-aluno{
+        width: 40vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .image-aluno{
+        width: 35vw;
+    }
+
+    .card-notas{
+        display: flex;
+        align-items: center;
+    }
+    .box-notas{
+        width: 45vw;
+        gap: 1.5%;
+    }
+
+    .tamanho-nota{
+        width: 2vw;
+    }
+
+}
+
 
 @media (max-width: 640px) {
     .card-container {
@@ -158,41 +197,56 @@ main {
     }
     .box-notas{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         width: 90%;
+        gap: 1.5rem;
     }
     .card-aluno {
         grid-area: container;
     }
     .card-aluno{
-        width: 70vw;
+        width: 90vw;
     }
     .image-aluno{
         width: 50vw;
     }
     .card-notas{
-        width: 70vw;
+        width: 90vw;
         display: flex;
         justify-content: center;
         grid-area: container;
     }
-    .box-notas{
-        gap: 1.5rem;
-    }
+
 }
 
 @media (max-width: 540px) {
+
+    .image-aluno{
+        width: 65vw;
+    }
+
+    .card-aluno{
+        width: 90%;
+    }
     .box-notas{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
         width: 60%;
+        gap: 3%;
+        height: 40vh;
     }
     .card-notas{
-        width: 70vw;
+        width: 90%;
+        height: 40vh;
         display: flex;
         justify-content: center;
         grid-area: container;
-        height: 45rem;
     }
+    
+    .tamanho-nota{
+        width: 3.5vw;
+    }
+
+
 
 }

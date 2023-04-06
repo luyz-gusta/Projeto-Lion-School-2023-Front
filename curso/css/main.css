@@ -31,17 +31,10 @@ nav {
     text-align: end;
 }
 
-.button__year{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    height: 1.3rem;
-    width: 1.5rem;
-    border-radius: 5px;
-    background-color: #3347B0;
-    font-size: 0.7rem;
-    cursor: pointer;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .legenda {

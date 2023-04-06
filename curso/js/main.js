@@ -26,7 +26,7 @@ const verificacaoAluno = (array) => {
 
     listaAlunos.forEach((aluno) => {
         let jsonAluno = {}
-        if(aluno.curso == nomeDoCurso){
+        if (aluno.curso == nomeDoCurso) {
             jsonAluno = {
                 nome: aluno.nome,
                 foto: aluno.foto,
@@ -46,7 +46,7 @@ const verificacaoAluno = (array) => {
 }
 
 //Função que cria os cards dos alunos da escola
-const criarCards = (aluno) => { 
+const criarCards = (aluno) => {
     const nomeCurso = document.querySelector('.nome__curso')
     nomeCurso.textContent = nomeDoCurso
 
@@ -86,45 +86,78 @@ const carregarCards = () => {
     let alunos = listaAlunos.informacoes.map(criarCards)
     containerCards.replaceChildren(...alunos)
 
+    const inputYear = document.getElementById('input-year')
+    inputYear.addEventListener('keydown', (e) => {
+        if (e.key == "Enter") {
+            const ano = inputYear.value
+            let jsonAlunos = alunosAno(listaAlunos.informacoes, ano)
+            alunos = jsonAlunos.listaAlunos.map(criarCards)
+            containerCards.replaceChildren(...alunos)
+        }
+    })
+
     cursando.onclick = () => {
-        const jsonAlunos = verificacaoAluno(listaAlunosCursando.informacoes)
-        alunos = jsonAlunos.arrayAlunos.map(criarCards)
-        containerCards.replaceChildren(...alunos)
+        filtrarAnoComStatus(listaAlunosCursando.informacoes)
     }
 
     finalizado.onclick = () => {
-        const jsonAlunos = verificacaoAluno(listaAlunosFinalizado.informacoes)
+        let jsonAlunos = verificacaoAluno(listaAlunosFinalizado.informacoes)
         alunos = jsonAlunos.arrayAlunos.map(criarCards)
         containerCards.replaceChildren(...alunos)
+        inputYear.addEventListener('keydown', (e) => {
+            if (e.key == "Enter") {
+                const ano = inputYear.value
+                const arrayAlunos = alunosAno(listaAlunosFinalizado.informacoes, ano)
+                jsonAlunos = verificacaoAluno(arrayAlunos.listaAlunos)
+                alunos = jsonAlunos.arrayAlunos.map(criarCards)
+                containerCards.replaceChildren(...alunos)
+            }   
+        })
     }
 
     status.onclick = () => {
-        let alunos = listaAlunos.informacoes.map(criarCards)
+        alunos = listaAlunos.informacoes.map(criarCards)
         containerCards.replaceChildren(...alunos)
+        inputYear.addEventListener('keydown', (e) => {
+            if (e.key == "Enter") {
+                const ano = inputYear.value
+                const arrayAlunos = alunosAno(listaAlunos.informacoes, ano)
+                jsonAlunos = verificacaoAluno(arrayAlunos.listaAlunos)
+                alunos = jsonAlunos.arrayAlunos.map(criarCards)
+                containerCards.replaceChildren(...alunos)
+            }   
+        })
     }
 
-    const buttonYear = document.querySelector('.button__year')
-    const inputYear = document.getElementById('input-year')
-    buttonYear.onclick = () => {
-        const ano = inputYear.value
-        inputYear.value = ''
-        const jsonAluno = alunosAno(listaAlunos.informacoes, ano)
-        alunos = jsonAluno.listaAlunos.map(criarCards)
-        console.log(alunos);
-        containerCards.replaceChildren(... alunos)
-    }
+    
+}
+
+const filtrarAnoComStatus = (listaArray) =>{
+    let lista = listaArray
+    let jsonAlunos = verificacaoAluno(lista)
+    let alunos = jsonAlunos.arrayAlunos.map(criarCards)
+    containerCards.replaceChildren(...alunos)
+    inputYear.addEventListener('keydown', (e) => {
+        if (e.key == "Enter") {
+            const ano = inputYear.value
+            const arrayAlunos = alunosAno(lista, ano)
+            jsonAlunos = verificacaoAluno(arrayAlunos.listaAlunos)
+            alunos = jsonAlunos.arrayAlunos.map(criarCards)
+            containerCards.replaceChildren(...alunos)
+        }   
+    })
 }
 
 const alunosAno = (array, anoConclusao) => {
-    
+
     let ano = anoConclusao
     let lista = array
     let jsonAluno = {}
     let listaAlunos = []
     let jsonLista = {}
 
-    lista.forEach((aluno) => { 
-        if(aluno.dataConclusao == ano){
+    lista.forEach((aluno) => {
+        if (aluno.dataConclusao == ano) {
             jsonAluno = {
                 nome: aluno.nome,
                 foto: aluno.foto,
