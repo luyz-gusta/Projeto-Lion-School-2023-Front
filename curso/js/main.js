@@ -4,7 +4,7 @@ import { getAlunos, getAlunosStatus } from "./api.js"
 
 // Local Storage
 const curso = localStorage.getItem('curso')
-const nomeDoCurso = localStorage.getItem('nome_curso')
+const nomeDoCurso = localStorage.getItem('nomeCurso')
 
 const listaAlunos = await getAlunos(curso)
 const listaAlunosCursando = await getAlunosStatus('Cursando')
@@ -47,13 +47,8 @@ const verificacaoAluno = (array) => {
 
 //Função que cria os cards dos alunos da escola
 const criarCards = (aluno) => { 
-    const containerCursos = document.querySelector('.container__cursos')
-
-    const nomeCurso = document.createElement('h1')
-    nomeCurso.classList.add('nome__curso')
+    const nomeCurso = document.querySelector('.nome__curso')
     nomeCurso.textContent = nomeDoCurso
-
-    containerCursos.replaceChildren(nomeCurso)
 
     const cardAluno = document.createElement('div')
 
