@@ -113,9 +113,38 @@ const carregarCards = () => {
     buttonYear.onclick = () => {
         const ano = inputYear.value
         inputYear.value = ''
-        let alunos
+        const jsonAluno = alunosAno(listaAlunos.informacoes, ano)
+        alunos = jsonAluno.listaAlunos.map(criarCards)
+        console.log(alunos);
+        containerCards.replaceChildren(... alunos)
     }
 }
 
+const alunosAno = (array, anoConclusao) => {
+    
+    let ano = anoConclusao
+    let lista = array
+    let jsonAluno = {}
+    let listaAlunos = []
+    let jsonLista = {}
+
+    lista.forEach((aluno) => { 
+        if(aluno.dataConclusao == ano){
+            jsonAluno = {
+                nome: aluno.nome,
+                foto: aluno.foto,
+                matricula: aluno.matricula,
+                sexo: aluno.sexo,
+                status: aluno.status,
+                curso: aluno.curso
+            }
+            listaAlunos.push(jsonAluno)
+        }
+    })
+    jsonLista = {
+        listaAlunos
+    }
+    return jsonLista
+}
+
 carregarCards()
-filtroAno()
