@@ -41,7 +41,6 @@ const verificacaoAluno = (array) => {
     let informacoes = {
         arrayAlunos
     }
-
     return informacoes
 }
 
@@ -101,39 +100,18 @@ const carregarCards = () => {
     }
 
     finalizado.onclick = () => {
-        let jsonAlunos = verificacaoAluno(listaAlunosFinalizado.informacoes)
-        alunos = jsonAlunos.arrayAlunos.map(criarCards)
-        containerCards.replaceChildren(...alunos)
-        inputYear.addEventListener('keydown', (e) => {
-            if (e.key == "Enter") {
-                const ano = inputYear.value
-                const arrayAlunos = alunosAno(listaAlunosFinalizado.informacoes, ano)
-                jsonAlunos = verificacaoAluno(arrayAlunos.listaAlunos)
-                alunos = jsonAlunos.arrayAlunos.map(criarCards)
-                containerCards.replaceChildren(...alunos)
-            }   
-        })
+        filtrarAnoComStatus(listaAlunosFinalizado.informacoes)
     }
 
     status.onclick = () => {
-        alunos = listaAlunos.informacoes.map(criarCards)
-        containerCards.replaceChildren(...alunos)
-        inputYear.addEventListener('keydown', (e) => {
-            if (e.key == "Enter") {
-                const ano = inputYear.value
-                const arrayAlunos = alunosAno(listaAlunos.informacoes, ano)
-                jsonAlunos = verificacaoAluno(arrayAlunos.listaAlunos)
-                alunos = jsonAlunos.arrayAlunos.map(criarCards)
-                containerCards.replaceChildren(...alunos)
-            }   
-        })
+        filtrarAnoComStatus(listaAlunos.informacoes)
     }
-
-    
 }
 
 const filtrarAnoComStatus = (listaArray) =>{
     let lista = listaArray
+    const containerCards = document.querySelector('.container__cards')
+    const inputYear = document.getElementById('input-year')
     let jsonAlunos = verificacaoAluno(lista)
     let alunos = jsonAlunos.arrayAlunos.map(criarCards)
     containerCards.replaceChildren(...alunos)
@@ -149,7 +127,6 @@ const filtrarAnoComStatus = (listaArray) =>{
 }
 
 const alunosAno = (array, anoConclusao) => {
-
     let ano = anoConclusao
     let lista = array
     let jsonAluno = {}
