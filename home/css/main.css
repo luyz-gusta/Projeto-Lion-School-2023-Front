@@ -89,4 +89,9 @@ main{
     .img__estudante{
         display: none;
     }
+    .card__curso:hover{
+        width: 20rem;
+        height: 10vh;
+        border: 2px solid #000000;
+    }
 }

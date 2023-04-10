@@ -197,7 +197,6 @@ main {
     }
     .box-notas{
         display: flex;
-        flex-direction: column;
         width: 90%;
         gap: 1.5rem;
     }

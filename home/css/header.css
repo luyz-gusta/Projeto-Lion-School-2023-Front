@@ -69,3 +69,9 @@ header{
         height: 35px;
     }    
 }
+
+@media (max-width: 350px) {
+    header{  
+        padding: 20px;
+    }
+}

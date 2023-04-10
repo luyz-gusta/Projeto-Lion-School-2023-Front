@@ -134,14 +134,72 @@ input::-webkit-inner-spin-button {
     width: 100%;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 640px) {
+    nav{
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+    .legenda{
+        width: auto;
+        gap: 5px;
+    }
+    .legenda {
+        width: 320px;
+        height: 100%;
+        font-size: 0.8rem;
+        gap: 20px;
+    }
+    
+    .legenda__cursando {
+        gap: 8px;
+    }
+    
+    .legenda__finalizado {
+        gap: 8px;
+    }
+    .filtro__ano input{
+        width: 135px;
+    }
+    .filtro__ano{
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+    .box__cursando {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .box__finalizado {
+        width: 15px;
+        height: 15px;
+    }
+    .card__aluno__cursando {
+        width: 20rem;
+        height: 23rem;
+        gap: 25px;
+    }
+    .img__aluno{
+        width: 17rem;
+        height: 17rem;
+    }
+    .card__aluno__finalizado {
+        width: 20rem;
+        height: 23rem;
+        gap: 25px;
+    }
+    .nome__aluno {
+        font-size: 1.4rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 540px) {
     nav{
         padding: 0 10px;
+        justify-content: space-between;
     }
-    /* .nome__curso{
-        font-size: 2rem;
-        
-    } */
     .legenda{
         width: max-content;
     }
@@ -150,11 +208,69 @@ input::-webkit-inner-spin-button {
         display: flex;
         justify-content: center;
     }
-}
-
-@media (max-width: 420px) { 
-    .legenda{
-        gap: 8px;
+    .filtro__ano input{
+        width: 120px;
+    }
+    .filtro__ano p{
+        font-size: 0.9rem;
     }
 }
 
+@media (max-width: 450px) { 
+    nav{
+        gap: 2px;
+    }
+    .filtro__ano input{
+        width: 100px;
+    }
+    .filtro__ano p{
+        font-size: 0.75rem;
+    }
+    .legenda {
+        height: 100%;
+        font-size: 0.75rem;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 420px) { 
+    nav{
+        height: 70px;
+        gap: 2px;
+    }
+    .filtro__ano input{
+        width: 100px;
+    }
+    .filtro__ano p{
+        font-size: 0.75rem;
+    }
+    .legenda {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        font-size: 0.75rem;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 350px) { 
+    .card__aluno__cursando {
+        width: 17rem;
+        height: 20rem;
+        gap: 25px;
+    }
+    .img__aluno{
+        width: 14rem;
+        height: 14rem;
+    }
+    .card__aluno__finalizado {
+        width: 17rem;
+        height: 20rem;
+        gap: 25px;
+    }
+    .nome__aluno {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    
+}

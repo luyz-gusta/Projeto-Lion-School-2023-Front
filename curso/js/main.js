@@ -110,8 +110,10 @@ const carregarCards = () => {
 
 const filtrarAnoComStatus = (listaArray) =>{
     let lista = listaArray
+
     const containerCards = document.querySelector('.container__cards')
     const inputYear = document.getElementById('input-year')
+    
     let jsonAlunos = verificacaoAluno(lista)
     let alunos = jsonAlunos.arrayAlunos.map(criarCards)
     containerCards.replaceChildren(...alunos)
