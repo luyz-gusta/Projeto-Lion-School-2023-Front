@@ -39,7 +39,10 @@ const carregarCursos = () =>{
 const exit = () => {
     const buttonSair = document.querySelector('.button__sair')
     buttonSair.onclick = function () {
-        window.close()
+        const exit = window.confirm("Deseja fechar do site?")
+        if(exit){
+            window.close()
+        }
     }
 }
 carregarCursos()
