@@ -58,12 +58,12 @@ const criarCards = (aluno) => {
     } else {
         cardAluno.classList.add('card__aluno__finalizado')
     }
+    nomeAluno.classList.add('nome__aluno')
+    nomeAluno.textContent = aluno.nome
 
     imgAluno.src = `${aluno.foto}`
     imgAluno.classList.add('img__aluno')
-
-    nomeAluno.classList.add('nome__aluno')
-    nomeAluno.textContent = aluno.nome
+    imgAluno.alt = `Imagem do aluno ${aluno.nome}`
 
     cardAluno.append(imgAluno, nomeAluno)
 

@@ -22,13 +22,14 @@ const criarCardsAluno = () => {
         const cardAluno = document.createElement('div')
         cardAluno.classList.add('card-aluno')
 
-        const fotoAluno = document.createElement('img')
-        fotoAluno.src = alunoMatricula.foto
-        fotoAluno.classList.add('image-aluno')
-
         const nomeAluno = document.createElement('p')
         nomeAluno.classList.add('name-aluno')
         nomeAluno.textContent = alunoMatricula.nome
+
+        const fotoAluno = document.createElement('img')
+        fotoAluno.src = alunoMatricula.foto
+        fotoAluno.classList.add('image-aluno')
+        fotoAluno.alt = `Imagem do aluno ${alunoMatricula.nome}`
 
         const cardNotas = document.createElement('div')
         cardNotas.classList.add('card-notas')

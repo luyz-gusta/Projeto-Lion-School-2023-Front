@@ -9,14 +9,15 @@ const dadosCursos = await getCursos()
 const cursos = (curso, indice) => {
     const cardCurso = document.createElement('div')
     cardCurso.classList.add('card__curso')
-
-    const imgCurso = document.createElement('img')
-    imgCurso.src = `${curso.icone}`
-    imgCurso.classList.add('img__curso')
     
     const nomeCurso = document.createElement('div')
     nomeCurso.classList.add('nome__curso')
     nomeCurso.textContent = curso.sigla
+
+    const imgCurso = document.createElement('img')
+    imgCurso.src = `${curso.icone}`
+    imgCurso.classList.add('img__curso')
+    imgCurso.alt = `Imagem do curso de ${curso.sigla}`
 
     cardCurso.append(imgCurso, nomeCurso)
 

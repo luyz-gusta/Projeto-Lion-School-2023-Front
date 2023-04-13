@@ -14,8 +14,8 @@ header{
 }
 
 .img__logo{
-    width: auto;
-    height: 75px;
+    width: 4.5vw;
+    height: auto;
 }
 
 .nome__escola{
@@ -52,8 +52,8 @@ header{
 
 @media (max-width: 475px) {
     .img__logo{
-        height: 60px;
-        width: auto;
+        height: auto;
+        width: 15vw;
     }
     .nome__escola{
         font-size: 1.2rem;

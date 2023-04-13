@@ -21,7 +21,7 @@ nav {
     align-items: flex-end;
 }
 
-.filtro__ano p {
+.filtro__ano label {
     color: #3347B0;
 }
 
@@ -211,7 +211,7 @@ input::-webkit-inner-spin-button {
     .filtro__ano input{
         width: 120px;
     }
-    .filtro__ano p{
+    .filtro__ano label{
         font-size: 0.9rem;
     }
 }
@@ -223,7 +223,7 @@ input::-webkit-inner-spin-button {
     .filtro__ano input{
         width: 100px;
     }
-    .filtro__ano p{
+    .filtro__ano label{
         font-size: 0.75rem;
     }
     .legenda {
@@ -241,7 +241,7 @@ input::-webkit-inner-spin-button {
     .filtro__ano input{
         width: 100px;
     }
-    .filtro__ano p{
+    .filtro__ano label{
         font-size: 0.75rem;
     }
     .legenda {
